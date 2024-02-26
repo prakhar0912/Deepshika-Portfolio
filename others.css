@@ -1,0 +1,283 @@
+
+body{
+    position: relative;
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+}
+
+a{
+    text-decoration: none;
+}
+
+.masterContainer{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar{
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px 0px #FB20FF33;
+    background-color: #F8F8F8;
+    z-index: 1;
+    padding: 24px 0;
+}
+
+.nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 48px;
+}
+
+.logo{
+    margin-left: 48px;
+}
+
+.logo > svg{
+    position: relative;
+    height: 100%;
+}
+
+.nav > a{
+    text-decoration: none;
+    color: black;
+    margin: 0 24px;
+}
+
+.nav > a:last-of-type{
+    margin-right: 0;
+}
+
+.nav > a.active{ 
+    color: #FA00FF;
+}
+
+.tieBack{
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 36px;
+    margin-left: 48px;
+}
+
+.tieBack > a{
+    display: flex;
+    align-content: center;
+    border-right: 2px #E1E1E1 solid;
+}
+
+.tieBack > a > span{
+    margin: 0 16px;
+}
+
+.tieBack > div{
+    position: relative;
+    margin: 0 16px;
+    color: #FA00FF !important;
+    /* border-left: 2px #E1E1E1 solid; */
+}
+
+.tieBack > div > a{
+    color: inherit;
+}
+
+.mainContainer{
+    position: relative;
+    margin: 54px 150px;
+}
+
+.thoughtsContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.thought{
+    position: relative;
+    /* width: 45%; */
+    border: 1.5px black solid;
+    border-radius: 12px;
+    margin: 24px 12px;
+    padding: 36px;
+}
+
+.thought > h1{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+
+.thoughtDeets{
+    position: relative;
+    display: flex;
+}
+
+.thoughtDeets > div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 24px;
+}
+
+.thoughtDeets > div > span{
+    padding-bottom: 24px;
+}
+
+.thoughtDeets > div > a{
+    display: block;
+    font-size: 20px;
+    color: #FA00FF;
+    font-weight: 600;
+    /* margin: 16px 0; */
+}
+
+@media(max-width: 1515px){
+    .mainContainer{
+        margin: 54px 100px;
+    }
+}
+
+
+@media(max-width: 1265px){
+    .mainContainer{
+        margin: 54px 100px;
+    }
+}
+
+
+
+
+/* Case Page */
+
+
+@font-face {
+    font-family: kyivBold;
+    src: url(./fonts/kyiv-type-serif/KyivTypeSerif-Bold.otf);
+}
+
+
+@font-face {
+    font-family: kyiv;
+    src: url(./fonts/kyiv-type-serif/KyivTypeSerif-Medium.otf);
+}
+  
+
+.caseMainContainer{
+    position: relative;
+    margin: 54px 380px;
+}
+
+.caseContainer > h1{
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 100;
+    font-family: kyiv, Arial, Helvetica, sans-serif;
+    margin-bottom: 36px;
+}
+
+.caseContainer > p{
+    font-family: "Roboto Serif", serif;
+    line-height: 20px;
+    margin-bottom: 36px;
+    font-size: 17px;
+}
+
+.caseDate{
+    font-family: kyivBold, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #676767;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+.caseContainer > h4{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #676767;
+    margin-top: 48px;
+}
+
+.projLink{
+    display: block;
+    font-family: kyivBold, Arial, Helvetica, sans-serif;
+    margin-top: 48px;
+    color:#FA00FF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.caseContainer > img{
+    width: 100%;
+}
+
+.imgDeets{
+    font-size: 14px !important;
+    font-family: "Roboto Mono", monospace !important;
+    font-size: 14px !important;
+}
+
+
+/* About Page */
+
+.aboutMainContainer{
+    position: relative;
+    margin: 54px 300px;
+}
+
+.aboutContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 17px;
+}
+
+.aboutLeft{
+    width: 380px;
+    font-family: "Roboto Serif", serif;
+}
+
+.aboutRight{
+    position: relative;
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.contactLeft{
+    transform: translateY(-20%);
+}
+
+.contactLeft > a{
+    text-align: right;
+    display: block;
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+.aboutContact{
+    position: relative;
+    background: #FCFE9F;
+    padding: 10px 50px;
+    font-size: 18px;
+    border-radius: 100%;
+    transform: translate(-30%,-110%) rotate(90deg);
+    text-align: center;
+    width: 140px;
+    border: 1px solid #000000;
+}

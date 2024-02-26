@@ -1,0 +1,124 @@
+
+body{
+    position: relative;
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+}
+
+.masterContainer{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* min-height: 100vh;
+    width: 100vw; */
+}
+
+.navBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px 0px #FB20FF33;
+    background-color: #F8F8F8;
+    z-index: 1;
+    padding: 24px 0;
+}
+
+.nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 48px;
+}
+
+.logo{
+    margin-left: 48px;
+}
+
+.logo > svg{
+    position: relative;
+    height: 100%;
+}
+
+.nav > a{
+    text-decoration: none;
+    color: black;
+    margin: 0 24px;
+}
+
+.nav > a:last-of-type{
+    margin-right: 0;
+}
+
+.mainContainer{
+    position: relative;
+    height: 100vh;
+    background: url('./img/postSky.jpg') center center no-repeat no-repeat;
+    background-size: cover;
+}
+
+.centerBlur{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: calc(0.3 * 100vw);
+    width: calc(0.3 * 100vw);
+    transform: translate(-50%, -50%);
+    background: rgba(252, 254, 159, 0.2);
+    backdrop-filter: blur(7px);
+}
+
+.thoughtContainer{
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 4px 24px 0px #FA00FF4D;
+    border: 1px solid #000000;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.thoughtContainer > p{
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.thoughtContainer > img{
+    /* width: 400px; */
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* mix-blend-mode: color-burn; */
+    /* background: #F8F8F8; */
+}
+
+.contact{
+    background: #FCFE9F;
+    padding: 0 60px;
+    border-radius: 100%;
+
+}
+
+.contact > p{
+    color: #FA00FF !important;
+}
+
+.footer a{
+    margin: 24px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
