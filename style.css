@@ -1,11 +1,10 @@
-
-body{
+body {
     position: relative;
     margin: 0;
     font-family: "Roboto Mono", monospace;
 }
 
-.masterContainer{
+.masterContainer {
     position: relative;
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@ body{
     width: 100vw; */
 }
 
-.navBar{
+.navBar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -27,7 +26,7 @@ body{
     padding: 24px 0;
 }
 
-.nav{
+.nav {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -36,33 +35,33 @@ body{
     margin-right: 48px;
 }
 
-.logo{
+.logo {
     margin-left: 48px;
 }
 
-.logo > svg{
+.logo>svg {
     position: relative;
     height: 100%;
 }
 
-.nav > a{
+.nav>a {
     text-decoration: none;
     color: black;
     margin: 0 24px;
 }
 
-.nav > a:last-of-type{
+.nav>a:last-of-type {
     margin-right: 0;
 }
 
-.mainContainer{
+.mainContainer {
     position: relative;
     height: 100vh;
     background: url('./img/postSky.jpg') center center no-repeat no-repeat;
     background-size: cover;
 }
 
-.centerBlur{
+.centerBlur {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -73,7 +72,7 @@ body{
     backdrop-filter: blur(7px);
 }
 
-.thoughtContainer{
+.thoughtContainer {
     position: absolute;
     top: 50%;
     left: 65%;
@@ -85,40 +84,176 @@ body{
     border-radius: 12px;
 }
 
-.thoughtContainer > p{
+.thoughtContainer>p {
     margin: 0;
     margin-bottom: 24px;
 }
 
-.thoughtContainer > img{
+.thoughtContainer>img {
     /* width: 400px; */
 }
 
-.footer{
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* mix-blend-mode: color-burn; */
-    /* background: #F8F8F8; */
 }
 
-.contact{
+.contact {
     background: #FCFE9F;
     padding: 0 60px;
     border-radius: 100%;
 
 }
 
-.contact > p{
+.contact>p {
     color: #FA00FF !important;
 }
 
-.footer a{
+.footer a {
     margin: 24px;
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+
+.mobileNav {
+    display: none;
+}
+
+@media(max-width: 1058px) {
+
+    @font-face {
+        font-family: rockwell;
+        src: url(./fonts/Rockwell-Font/ROCK.TTF);
+    }
+    
+
+    .nav {
+        display: none;
+    }
+
+    .mobileNav {
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: -6px;
+    }
+
+    .p-menu1 {
+        height: 100%;
+    }
+
+
+
+
+    /* Hamburger */
+    .hamburger1 {
+        /* height: 40px; */
+        margin: 10px;
+        display: -ms-grid;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+        z-index: 120;
+        position: absolute;
+        top: 8px;
+        right: 22px;
+    }
+
+    .hamburger1 div {
+        background-color: rgb(61, 61, 61);
+        position: relative;
+        width: 30px;
+        height: 4px;
+        border-radius: 50px;
+        margin-top: 5px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #toggle1 {
+        display: none;
+    }
+
+    #toggle1:checked+.hamburger1 .top {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin-top: 22.5px;
+    }
+
+    #toggle1:checked+.hamburger1 .meat {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: -5px;
+    }
+
+    #toggle1:checked+.hamburger1 .bottom {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    #toggle1:checked~.menu1 {
+        height: 280px;
+    }
+
+
+    /* Menu */
+    .menu1 {
+        width: 100%;
+        background-color: white;
+        margin: 0;
+        display: -ms-grid;
+        /* display: grid;
+        grid-template-rows: 1fr repeat(4, 0.5fr); */
+        grid-row-gap: 25px;
+        padding: 0 35px;
+        list-style: none;
+        clear: both;
+        width: auto;
+        text-align: left;
+        height: 0px;
+        overflow: hidden;
+        transition: height .4s ease;
+        z-index: 120;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        margin-top: 72px;
+        box-shadow: 0px 4px 4px 0px #FB20FF33;
+        background-color: #F8F8F8;
+    }
+
+    .menu1 a{
+        text-decoration: none;
+        color: black;
+        font-family: rockwell, Arial, Helvetica, sans-serif;
+        display: block;
+        margin-bottom: 40px;
+        font-weight: 550;
+    }
+
+    .menu1 a:first-child {
+        margin-top: 30px;
+    }
+
+    .menu1 a:last-child {
+        margin-bottom: 40px;
+    }
+
+    .link1 {
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+        font: 700 20px 'Oswald', sans-serif;
+    }
+
+    .link1:hover {
+        background-color: #fff;
+        color: rgb(61, 61, 61);
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
 }
