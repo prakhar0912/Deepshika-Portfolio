@@ -40,6 +40,7 @@ a{
 
 .logo{
     margin-left: 48px;
+    cursor: pointer;
 }
 
 .logo > svg{
