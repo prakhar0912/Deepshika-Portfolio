@@ -164,6 +164,10 @@ body {
         right: 22px;
     }
 
+    .logo{
+        margin-left: 22px;
+    }
+
     .hamburger1 div {
         background-color: rgb(61, 61, 61);
         position: relative;
@@ -255,5 +259,56 @@ body {
         color: rgb(61, 61, 61);
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
+    }
+}
+
+.mobIcon{
+    display: none;
+}
+
+@media(max-width: 900px){
+
+    .centerBlur{
+        display: none;
+    }
+
+    .thoughtContainer{
+        left: 50%;
+    }
+
+    .lapIcon{
+        display: none;
+    }
+    
+    .mobIcon{
+        display: block;
+    }
+
+    .mobIcon > img{
+        height: 16px;
+        width: 16px;
+    }
+
+    .footer{
+        justify-content: space-evenly;
+    }
+
+    .contact{
+        padding: 0 20px;
+    }
+
+    .contact>p{
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .footer a{
+        margin: 24px 16px;
+    }
+
+    .footer > a:nth-of-type(2){
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

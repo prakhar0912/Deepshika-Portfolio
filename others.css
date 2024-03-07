@@ -218,6 +218,18 @@ a{
 }
 
 
+@media(max-width: 632px){
+    .mainContainer{
+        margin: 54px 20px;
+    }
+}
+
+@media(max-width: 422px){
+    .mainContainer{
+        margin: 54px 0px;
+    }
+}
+
 
 /* Case Page */
 
@@ -349,10 +361,10 @@ a{
     position: relative;
     align-self: flex-end;
     justify-self: flex-end;
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
+    display: flex;
     width: max-content;
+    padding-left: 70px;
+    margin-right: 100px;
 }
 
 .contactLeft{
@@ -366,16 +378,20 @@ a{
     color: black;
 }
 
+.contactRight{
+    transform: translate(-30%,-110%) rotate(90deg);
+    position: relative;
+    /* margin-right: 50px; */
+}
 
 .aboutContact{
-    position: relative;
+    position: absolute;
     background: #FCFE9F;
     padding: 10px 50px;
     font-size: 18px;
     border-radius: 100%;
-    transform: translate(-30%,-110%) rotate(90deg);
     text-align: center;
-    width: 140px;
+    width: 130px;
     border: 1px solid #000000;
 }
 
@@ -394,16 +410,76 @@ a{
     }
 }
 
-@media(max-width: 1200px){
+@media(max-width: 930px){
+
     .aboutContainer{
-        grid-template-columns: none;
-        grid-template-rows: auto auto;
+        display: block;
+        width: 70%;
+        margin: 0 auto;
     }
 
-    
+
+    .aboutLeft > img{
+        grid-area: img;
+        padding-left: 30px;
+    }
+
+
+    .aboutLeft > p:first-of-type{
+        grid-area: paraa;
+    }
+
+    .aboutLeft > p:last-of-type{
+        grid-area: parab;
+    }
+
+    .aboutLeft{
+        display: grid;
+        grid-template-areas: "paraa img" "parab parab";
+        width: 100%;
+    }
 
     .contactLeft{
         transform: none;
+    }
+
+    .aboutRight{
+        flex-direction: row-reverse;
+        margin: 20px 0;
+        padding: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contactRight{
+        position: relative;
+        transform: none;
+    }
+
+    .aboutContact{
+        position: relative;
+    }
+}
+
+@media(max-width: 691px){
+    .aboutContainer{
+        width: 85%;
+    }
+}
+
+@media(max-width: 601px){
+    .aboutRight{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aboutContact{
+        margin-bottom: 40px;
+    }
+
+    .contactLeft > a{
+        text-align: center;
     }
 }
 
@@ -450,6 +526,10 @@ a{
         position: absolute;
         top: 8px;
         right: 22px;
+    }
+
+    .logo{
+        margin-left: 22px;
     }
 
     .hamburger1 div {
