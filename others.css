@@ -117,11 +117,14 @@ a{
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 36px;
+    min-height: 56px;
 }
 
 .thoughtDeets{
     position: relative;
     display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 
 .thoughtDeets > div{
@@ -145,7 +148,9 @@ a{
 }
 
 .thoughtDeets > img{
-    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     border-radius: 20px;
     transform-origin: 0;
 }
@@ -159,6 +164,7 @@ a{
 
 @media(max-width: 1265px){
     .thoughtDeets{
+        display: flex;
         flex-direction: column;
     }
 
@@ -180,6 +186,7 @@ a{
     }
 
     .thoughtDeets{
+        display: flex;
         flex-direction: row;
     }
 
@@ -205,6 +212,7 @@ a{
 
 @media(max-width: 880px){
     .thoughtDeets{
+        display: flex;
         flex-direction: column;
     }
 
@@ -339,7 +347,8 @@ a{
 
 .aboutMainContainer{
     position: relative;
-    margin: 54px 0;
+    padding: 36px 0;
+    padding-bottom: 56px;
     display: grid;
     grid-template-columns: 100%;
     align-items: center;
@@ -356,6 +365,7 @@ a{
 .aboutLeft{
     width: 380px;
     font-family: "Roboto Serif", serif;
+    font-size: 16px;
 }
 
 .aboutRight{
@@ -377,6 +387,7 @@ a{
     display: block;
     margin-bottom: 20px;
     color: black;
+    font-size: 14px;
 }
 
 .contactRight{
@@ -389,7 +400,7 @@ a{
     position: absolute;
     background: #FCFE9F;
     padding: 10px 50px;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 100%;
     text-align: center;
     width: 130px;
@@ -602,6 +613,10 @@ a{
         display: block;
         margin-bottom: 40px;
         font-weight: 550;
+    }
+
+    .menu1 > a.active{
+        color: #F535AA;
     }
 
     .menu1 a:first-child {
