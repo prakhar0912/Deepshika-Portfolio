@@ -113,6 +113,7 @@ a{
 }
 
 .thought > h1{
+    font-family: "Roboto Serif", serif;
     font-size: 24px;
     font-weight: 600;
     margin-top: 0;
@@ -136,6 +137,7 @@ a{
 }
 
 .thoughtDeets > div > span{
+    font-family: "Roboto Serif", serif;
     padding-bottom: 24px;
 }
 
