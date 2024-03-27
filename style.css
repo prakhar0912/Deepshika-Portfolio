@@ -1,7 +1,7 @@
 body {
     position: relative;
     margin: 0;
-    font-family: "Roboto Serif", regular;
+    font-family: "Roboto Mono", regular;
 }
 
 .masterContainer {
@@ -58,7 +58,7 @@ body {
 .mainContainer {
     position: relative;
     height: 100vh;
-    background: url('./img/Background.png') center center no-repeat no-repeat;
+    background: url('./img/Background0.png') center center no-repeat no-repeat;
     background-size: cover;
 }
 
