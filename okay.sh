@@ -1,1 +1,1 @@
-abap=$(ls -l)
+ls -l
