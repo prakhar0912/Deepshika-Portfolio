@@ -22,12 +22,15 @@ do
     echo $inst
 done
 
-# stopCommandOutput=$(stopsap -help "$output")
+
+echo "---------------------------------------------"
+stopsap $output
+echo "---------------------------------------------"
 
 declare -a stopServiceOutput=()
 for inst in "${instances[@]}"
 do
-    stopServiceOutput+=("$(sapcontrol -nr ${inst} -function GetSystemInstanceList)")
+    stopServiceOutput+=("$(sapcontrol -nr ${inst} -function StopService)")
 done
 
 declare -a cleanIpcOutput=()
