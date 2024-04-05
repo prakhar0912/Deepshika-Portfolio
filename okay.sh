@@ -1,4 +1,4 @@
-
+echo "=========================================================="
 
 instances=($(startsap -c | grep -Po "\d+$"))
 abap=$(sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep ABAP)
@@ -14,8 +14,8 @@ else
     output="Error"
 fi
 
-whoami
-echo $output System
+echo SID: $(whoami)
+echo System Type: $output
 
 # stopCommandOutput=$(stopsap -help "$output")
 
@@ -31,13 +31,15 @@ do
     cleanIpcOutput+=("$(cleanipc ${inst} remove all)")
 done
 
-echo "Output of command: sapcontrol -nr <instance numbers> -function StopService\n"
+echo "Output of command: sapcontrol -nr <instance numbers> -function StopService"
+echo
 for output in "${stopServiceOutput[@]}"
 do
     echo $output
 done
 
-echo "Output of command: cleanipc <instance number> remove all\n"
+echo "Output of command: cleanipc <instance number> remove all"
+echo
 for output in "${cleanIpcOutput[@]}"
 do
     echo $output
