@@ -8,7 +8,8 @@ echo $abap
 echo $java
 
 if [ -n abap ] && [ -n java ]; then
-    echo $whoami ABAP and JAVA
+    whoami
+    echo ABAP and JAVA
     output="ABAP and JAVA"
 elif [ -n abap ]; then
     echo $whoami ABAP
