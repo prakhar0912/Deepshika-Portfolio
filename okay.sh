@@ -3,7 +3,8 @@ instances=($(startsap -c | grep -Po "\d+$"))
 abap=$(sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep ABAP | grep GREEN)
 java=$(sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep J2EE | grep GREEN)
 
-echo $host
+echo $abap
+echo $java
 
 if [ -n abap ] && [ -n java ]; then
     echo $whoami ABAP and JAVA
