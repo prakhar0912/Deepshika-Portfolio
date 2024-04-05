@@ -16,6 +16,11 @@ fi
 
 echo SID: $(whoami)
 echo System Type: $output
+echo Instance Numbers:
+for inst in "${instances[@]}"
+do
+    echo inst
+done
 
 # stopCommandOutput=$(stopsap -help "$output")
 
@@ -36,13 +41,16 @@ echo
 for output in "${stopServiceOutput[@]}"
 do
     echo $output
+    echo "-----------------------------------------"
 done
+
 
 echo "Output of command: cleanipc <instance number> remove all"
 echo
 for output in "${cleanIpcOutput[@]}"
 do
     echo $output
+    echo "-----------------------------------------"
 done
 
 
