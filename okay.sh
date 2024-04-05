@@ -21,13 +21,13 @@ fi
 declare -a stopServiceOutput=()
 for inst in "${instances[@]}"
 do
-    readarray -t stopServiceOutput < <(sapcontrol -nr ${inst} -function GetSystemInstanceList)
+    stopServiceOutput+=$(sapcontrol -nr ${inst} -function GetSystemInstanceList)
 done
 
 declare -a cleanIpcOutput=()
 for inst in "${instances[@]}"
 do
-    readarray -t stopServiceOutput < <(cleanipc ${inst} remove all)
+    cleanIpcOutput+=$(cleanipc ${inst} remove all)
 done
 
 declare -p stopServiceOutput
