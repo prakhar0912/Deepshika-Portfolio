@@ -19,7 +19,7 @@ echo System Type: $output
 echo Instance Numbers:
 for inst in "${instances[@]}"
 do
-    echo inst
+    echo $inst
 done
 
 # stopCommandOutput=$(stopsap -help "$output")
