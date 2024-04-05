@@ -56,6 +56,8 @@ do
     echo "-----------------------------------------"
 done
 
-
-
-
+for inst in "${instances[@]}"
+do
+    sapcontrol -nr $inst -function GetProcessList
+    echo "--------------------------------------"
+done
