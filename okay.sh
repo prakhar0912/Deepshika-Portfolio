@@ -1,4 +1,5 @@
 instances=($(startsap -c | grep -Po "\d+$"))
+sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep ABAP | grep GREEN
 abap=$(sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep ABAP | grep GREEN)
 java=$(sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep J2EE | grep GREEN)
 
