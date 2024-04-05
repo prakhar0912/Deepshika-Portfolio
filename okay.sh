@@ -24,7 +24,7 @@ stopCommandOutput=$(stopsap -help "$output")
 declare -a stopServiceOutput=()
 for inst in "${instances[@]}"
 do
-    storServiceOutput+=($(sapcontrol -nr ${inst} -function GetSystemInstanceList))
+    stopServiceOutput+=($(sapcontrol -nr ${inst} -function GetSystemInstanceList))
 done
 
 declare -a cleanIpcOutput=()
