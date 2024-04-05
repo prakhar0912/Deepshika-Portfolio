@@ -1,19 +1,12 @@
 instances=($(startsap -c | grep -Po "\d+$"))
-sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep ABAP | grep GREEN
 abap=$(sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep ABAP)
 java=$(sapcontrol -nr ${instances[0]} -function GetSystemInstanceList | grep J2EE)
 
-echo ${instances[0]}
-echo ${instances[1]}
-echo $abap
-echo $java
-
-if [ -n abap ] && [ -n java ]; then
+if [ -n "$abap" ] && [ -n "$java" ]; then
     whoami
     echo ABAP and JAVA
     output="ABAP and JAVA"
 elif [ -n abap ]; then
-    echo $whoami ABAP
     output="r3"
 elif [ -n java ]; then
     echo $whoami JAVA
@@ -36,5 +29,8 @@ for inst in "${instances[@]}"
 do
     cleanIpcOutput+=($(cleanipc ${inst} remove all))
 done
+
+declare -p stopServiceOutput
+declare -p cleanIpcOutput
 
 
