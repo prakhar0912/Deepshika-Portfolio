@@ -22,7 +22,7 @@ else
     output="Error"
 fi
 
-stopCommandOutput=$(stopsap -help "$output")
+# stopCommandOutput=$(stopsap -help "$output")
 
 declare -a stopServiceOutput=()
 for inst in "${instances[@]}"
