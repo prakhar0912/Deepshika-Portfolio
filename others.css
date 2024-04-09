@@ -106,7 +106,7 @@ a{
 .thought{
     position: relative;
     /* width: 45%; */
-    border: 1px black solid;
+    border: 1px rgb(45, 45, 45) solid;
     border-radius: 12px;
     margin: 24px 12px;
     padding: 36px;
@@ -114,8 +114,8 @@ a{
 
 .thought > h1{
     font-family: kyiv, Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 50;
     margin-top: 0;
     margin-bottom: 18px;
     min-height: 56px;
@@ -125,7 +125,7 @@ a{
     position: relative;
     display: flex;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
 }
 
 .thoughtDeets > div{

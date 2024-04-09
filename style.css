@@ -58,7 +58,7 @@ body {
 .mainContainer {
     position: relative;
     height: 100vh;
-    background: url('./img/background0.png') center center no-repeat no-repeat;
+    background: url('./img/Background0.svg') center center no-repeat no-repeat;
     background-size: cover;
 }
 
@@ -66,11 +66,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: calc(0.3 * 100vw);
-    width: calc(0.3 * 100vw);
+    height: calc(0.2 * 100vw);
+    width: calc(0.2 * 100vw);
     transform: translate(-50%, -50%);
-    background: rgba(252, 254, 159, 0.2);
-    backdrop-filter: blur(7px);
+    background: rgba(191, 247, 119, 0.336);
+    backdrop-filter: blur(16px);
 }
 
 .thoughtContainer {
@@ -92,6 +92,7 @@ body {
 
 .thoughtContainer>img {
     /* width: 400px; */
+    margin: 0;
 }
 
 .footer {
